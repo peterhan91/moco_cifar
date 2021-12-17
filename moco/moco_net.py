@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from encoder import ModelBase
+from moco.encoder import ModelBase
 
 
 class ModelMoCo(nn.Module):

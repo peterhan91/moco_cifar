@@ -19,7 +19,8 @@ def train(net, data_loader, train_optimizer, epoch, args):
 
         total_num += data_loader.batch_size
         total_loss += loss.item() * data_loader.batch_size
-        train_bar.set_description('Train Epoch: [{}/{}], lr: {:.6f}, Loss: {:.4f}'.format(epoch, args.epochs, optimizer.param_groups[0]['lr'], total_loss / total_num))
+        train_bar.set_description('Train Epoch: [{}/{}], lr: {:.6f}, Loss: {:.4f}'.format(epoch, 
+                                args.epochs, train_optimizer.param_groups[0]['lr'], total_loss / total_num))
 
     return total_loss / total_num
 
